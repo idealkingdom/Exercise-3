@@ -1,0 +1,21 @@
+#editTaskModal.modal.fade(tabindex='-1' role='dialog' aria-labelledby='addTaskLabel' aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content
+			.modal-header
+				h5#editTaskLabel.modal-title Edit Task Details
+				button.close(type='button' data-dismiss='modal' aria-label='Close')
+					span(aria-hidden='true') &times;
+
+			.modal-body
+				p#edit-idno(style="font-weight:bold")
+				form
+					.form-group
+					label.col-form-label(for='task-name' style="float:left") Name:
+					input#task-name-edit.form-control(type='text')
+					.form-group
+					label.col-form-label(for='desc-text' style="float:left") Description:
+					textarea#desc-text-edit.form-control
+			.modal-footer
+				button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+				button#submitTask-edit.btn.btn-primary(type='button' onclick="editTask()") Save
+				

@@ -1,0 +1,12 @@
+{
+  "mongoDs": {
+    "host": "localhost",
+    "port": 27017,
+    "database": "Task",
+    "password": "",
+    "name": "mongoDs",
+    "user": "",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  }
+}

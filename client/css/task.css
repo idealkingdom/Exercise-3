@@ -1,0 +1,32 @@
+.hidden{
+	opacity: 0;
+	position: absolute;
+	left:-999999px;
+}
+table#task-table{
+	background-color: #d5e0d9;
+	color:black;
+	border-left: 0;
+	border-right: 0;
+}
+
+
+
+button.tasktools{
+	display: inline-flex;
+
+}
+
+
+div.tools-container{
+	display: inline-flex;
+	padding: 5px;
+}
+
+.pDesc{
+	  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width:150px;
+}

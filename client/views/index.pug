@@ -1,0 +1,35 @@
+mixin scriptLib(p)
+	script(src="lib/"+p)
+mixin libJs(p)
+	script(src="js/"+p)
+mixin libCss(p)
+	link(rel="stylesheet" type="text/css" href="lib/"+p)
+mixin styleCss(p)
+	link(rel="stylesheet" type="text/css" href="css/"+p)
+
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		title Exer 3
+		+libCss("bootstrap/dist/css/bootstrap.min.css")
+		+libCss("font-awesome/css/all.min.css")
+		+libCss("jquery-loading/dist/jquery.loading.min.css")
+		+styleCss("index.css")
+		+styleCss("task.css")
+
+	body
+		div.container.jumbotron.center
+			include tasks.pug
+		+scriptLib("axios/dist/axios.min.js")
+		+scriptLib("jquery/dist/jquery.min.js")
+		+scriptLib("bootstrap/dist/js/bootstrap.min.js")
+		+scriptLib("jquery-loading/dist/jquery.loading.min.js")
+		+libJs("TaskAction/getTask.js")
+		+libJs("TaskAction/submitTask.js")
+		+libJs("TaskAction/delMultiTask.js")
+		+libJs("TaskAction/editTask.js")
+		+libJs("Functions/convertDate.js")
+		+libJs("Functions/modalJS.js")
+		

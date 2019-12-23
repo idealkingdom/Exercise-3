@@ -1,0 +1,19 @@
+body{
+	background-image: url("https://www.aithority.com/wp-content/uploads/2019/03/Dynata-Debuts-Annual-Global-Trends-Report.jpg");
+	
+}
+div.container{
+	margin-top: 2%;
+	background: skyblue;
+	box-shadow: 2px 1px;
+	text-align: center;
+	min-height: 500px;
+}
+
+div.container h1{
+	background : orange;
+}
+
+.center{
+	margin: 0 auto;
+}
