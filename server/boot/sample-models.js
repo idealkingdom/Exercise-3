@@ -1,6 +1,6 @@
 module.exports = function(app) {
 	var task = app.models.Task
-  app.dataSources.mongoDs.automigrate('Task', function(err) {
+  app.dataSources.mongoDs.autoupdate('Task', function(err) {
     if (err) throw err;
     
     task.create([{

@@ -21,7 +21,6 @@ $("div.container").on('click', '.cntrlChckbox', function(el) {
 		var checkFind = $(this).find('input:checkbox')
 	 	var checked = checkFind.is(':checked')
 		checkFind.prop("checked",+!checked).change();
-		
 		}
 		if (target[0].tagName === 'TH' || target.parents("th.cntrlChckbox").length) {
 			var checkbox = $('td.cntrlChckbox input:checkbox')
@@ -61,7 +60,7 @@ function appendTask (data) {
 			.append(`<tr id=${id}>
 					 	<td class="cntrlChckbox">${checkbox}</td>
 					 	<td class="tdName"><p>${name}</p></td>
-					 	<td ><span><div class="pDesc">${description}</div></td>
+					 	<td><div class="hidden pDesc">${description}</div><a href="#" class="cdescription">Click here to show description</a></td>
 					 	<td><p>${date_created}</p></td>
 					 	<td>
 					 		<div class="tools-container">

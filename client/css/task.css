@@ -3,6 +3,9 @@
 	position: absolute;
 	left:-999999px;
 }
+
+
+
 table#task-table{
 	background-color: #d5e0d9;
 	color:black;
@@ -11,6 +14,15 @@ table#task-table{
 }
 
 
+table thead tr th{
+	 position: sticky; top: 0;
+}
+
+div.table-wrapper {
+  max-height: 400px;
+  overflow-y: scroll;
+
+}
 
 button.tasktools{
 	display: inline-flex;
@@ -23,10 +35,3 @@ div.tools-container{
 	padding: 5px;
 }
 
-.pDesc{
-	  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  width:150px;
-}

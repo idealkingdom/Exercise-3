@@ -1,25 +1,18 @@
 var datap = {};
 function editTask() {
-var sid = $("p#edit-idno").text();
+var sid = $("p#edit-idno").text().trim();
 var passdata = {
     name: $("#task-name-edit").val(),
-    description : $("#desc-text-edit").val()
+    description : $("#desc-text-edit").val(),
+    date_created: Date.now(),
+    id: sid
   
 }
-console.log(datap)
-axios.patch({
-  url: 'api/Tasks/'+'5e008c09485ce941fc6a5e44',
-  data: passdata,
-  headers: {
-    'Content-Type': ' application/json'
-  }
-}).then((response) => {
-  modalEl = $("#addTaskModal").modal('hide')
+axios.put('api/Tasks',passdata,
+).then((response) => {
+  modalEl = $("#editTaskModal").modal('hide')
   modalReset(modalEl)
-
   getAllTasks();
-
-
 }).catch(error => console.log(error.response.data))
 
 }

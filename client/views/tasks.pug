@@ -1,23 +1,25 @@
 h1 Tasks
 div#task-data.hidden
 div.task-container
-	div.container-input(style="float:left;margin-bottom:1%;")
+	div.container-input(style="text-align:left;margin-bottom:1%;")
 		button.btn.btn-primary(type='button' data-toggle='modal' data-target='#addTaskModal') Add Task
 		include modals/addTaskmodal.pug
 		include modals/editTaskmodal.pug
-	table#task-table.table.table-dark.thead-light.table-responsive-sm.center
-		thead.thead-dark
-			tr
-				th.cntrlChckbox
-					div.input-group-prepend
-					div.input-group-text
-						input(type="checkbox")
-				th Name
-				th(style="width:30%;max-height:50px;") Description
-				th Date Created
-				th
-					i.fas.fa-tools
-					button#tskallDelbtn.btn.tasktools(style="color:white;float:right" onclick="deleteMultTask()")
-						i.far.fa-trash-alt
+		include modals/viewTaskmodal.pug
+	div.table-wrapper
+		table#task-table.table.table-dark.thead-light.table-responsive-sm.center.table-striped.mb-0
+			thead.thead-dark
+				tr
+					th.cntrlChckbox
+						div.input-group-prepend
+						div.input-group-text
+							input(type="checkbox")
+					th Name
+					th(style="width:30%;max-height:50px;") Description
+					th Date Created
+					th
+						i.fas.fa-tools
+						button#tskallDelbtn.btn.tasktools(style="color:white;float:right" onclick="deleteMultTask()")
+							i.far.fa-trash-alt
 
 
