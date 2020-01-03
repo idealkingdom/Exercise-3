@@ -8,12 +8,17 @@
 			.modal-body
 				form
 					.form-group
-					label.col-form-label(for='task-name' style="float:left") Name:
-					input#task-name.form-control(type='text')
+						label.col-form-label(for='task-name' style="float:left") Name:
+						input#task-name.form-control(type='text')(min-length="3" max-length="300")
 					.form-group
-					label.col-form-label(for='desc-text' style="float:left") Description:
-					textarea#desc-text.form-control
-			.modal-footer
-				button.btn.btn-secondary(type='button' data-dismiss='modal') Close
-				button#submitTask.btn.btn-primary(type='button' onclick="submitTask()") Submit
-				
+						label.col-form-label(for='task-status' style="float:left") Status:
+						select#task-status.custom-select
+							option(value='1') Pending
+							option(value='2') Ongoing
+							option(value='3') Completed
+					.form-group
+						label.col-form-label(for='desc-text' style="float:left" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Description:
+						textarea#desc-text.form-control(min-length="3" max-length="300")
+				.modal-footer
+					button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+					button#submitTask.btn.btn-primary(type='submit' onclick="submitTask()") Submit

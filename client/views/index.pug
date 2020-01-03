@@ -16,6 +16,7 @@ html(lang="en")
 		+libCss("bootstrap/dist/css/bootstrap.min.css")
 		+libCss("font-awesome/css/all.min.css")
 		+libCss("jquery-loading/dist/jquery.loading.min.css")
+		+libCss("notifyjs/dist/styles/metro/notify-metro.css")
 		+styleCss("index.css")
 		+styleCss("task.css")
 
@@ -23,16 +24,22 @@ html(lang="en")
 	body
 		div.container.jumbotron.center
 			include tasks.pug
-		+scriptLib("axios/dist/axios.min.js")
 		+scriptLib("jquery/dist/jquery.min.js")
+		+scriptLib("axios/dist/axios.min.js")
+		+scriptLib("popper.js/dist/popper.min.js")
 		+scriptLib("bootstrap/dist/js/bootstrap.min.js")
 		+scriptLib("jquery-loading/dist/jquery.loading.min.js")
+		+scriptLib("notifyjs/dist/notify.js")
+		+scriptLib("notifyjs/dist/styles/metro/notify-metro.js")
+		+libJs("TaskAction/getName.js")
 		+libJs("TaskAction/getTask.js")
 		+libJs("TaskAction/submitTask.js")
 		+libJs("TaskAction/delMultiTask.js")
 		+libJs("TaskAction/editTask.js")
 		+libJs("TaskAction/viewTask.js")
+		+libJs("TaskAction/viewTask.js")
 		+libJs("Functions/convertDate.js")
 		+libJs("Functions/modalJS.js")
+		+libJs("general.js")
 
 		

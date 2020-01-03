@@ -7,9 +7,8 @@ function getAllselectedIds(){
     return result;
 }
 
-
+ 
 function deleteMultTask() {
-console.log(getAllselectedIds())
 var storeIds = getAllselectedIds()
 
 axios({

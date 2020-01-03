@@ -17,6 +17,10 @@
     "description": {
       "type": "string",
       "required": true
+    },
+    "status":{
+      "type":"number",
+      "required": true
     }
   },
   "validations": [],
